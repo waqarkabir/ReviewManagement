@@ -1,0 +1,111 @@
+﻿@model Customer;
+
+@{
+    ViewData["Title"] = "Rate Page";
+}
+
+<h1>Rate Page</h1>
+<style>
+    .rating-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .rating-button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<form asp-action="Feedback" method="post">
+    <input type= "hidden" asp-for="Id" value="@Model.Id" />
+
+    <div class="rating-group">
+        <div>
+            <h3>Group 1</h3>
+            <button type="submit" name="Rating" id="Rating"  value="1" class="rating-button">1</button>
+            <button type="submit" name="Rating" id="Rating"  value="2" class="rating-button">2</button>
+        </div>
+        <div>
+            <h3>Group 2</h3>
+            <button type="submit" name="Rating" id="Rating"  value="3" class="rating-button">3</button>
+            <button type="submit" name="Rating" id="Rating"  value="4" class="rating-button">4</button>
+        </div>
+        <div>
+            <h3>Group 3</h3>
+            <button type="submit" name="Rating" id="Rating"  value="5" class="rating-button">5</button>
+            <button type="submit" name="Rating" id="Rating"  value="6" class="rating-button">6</button>
+        </div>
+        <div>
+            <h3>Group 4</h3>
+            <button type="submit" name="Rating" id="Rating"  value="7" class="rating-button">7</button>
+            <button type="submit" name="Rating" id="Rating"  value="8" class="rating-button">8</button>
+        </div>
+        <div>
+            <h3>Group 5</h3>
+            <button type="submit" name="Rating" id="Rating"  value="9" class="rating-button">9</button>
+            <button type="submit" name="Rating" id="Rating"  value="10" class="rating-button">10</button>
+        </div>
+    </div>
+</form>
+
+@*<!DOCTYPE html>
+<html>
+<head>
+    <title>Rating Page</title>
+    <style>
+        .rating-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .rating-button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rating Page</h1>
+    <div class="rating-group">
+        <p>Please rate our service  !</p>
+    </div>
+    <div class="rating-group">
+        <div>
+            <h4>Group 1</h4>
+            <button class="rating-button">1</button>
+            <button class="rating-button">2</button>
+        </div>
+        <div>
+            <h4>Group 2</h4>
+            <button class="rating-button">3</button>
+            <button class="rating-button">4</button>
+        </div>
+        <div>
+            <h4>Group 3</h4>
+            <button class="rating-button">5</button>
+            <button class="rating-button">6</button>
+        </div>
+        <div>
+            <h4>Group 4</h4>
+            <button class="rating-button">7</button>
+            <button class="rating-button">8</button>
+        </div>
+        <div>
+            <h4>Group 5</h4>
+            <button class="rating-button">9</button>
+            <button class="rating-button">10</button>
+        </div>
+    </div>
+</body>
+</html>
+*@
